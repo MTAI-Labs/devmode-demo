@@ -5,3 +5,9 @@ services:
     command: sleep infinity
     volumes:
       - .:/workspace
+
+  # Entrypoint: environments are exposed through a service on container port 80.
+  entrypoint:
+    image: nginx:alpine
+    ports:
+      - "80"
